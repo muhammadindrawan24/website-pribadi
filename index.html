@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark" data-lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Adi Indrawan – Web Developer & UI Designer. Portfolio profesional mahasiswa Sistem Informasi UISI." />
+  <meta name="keywords" content="Web Developer, UI Designer, Portfolio, Sistem Informasi, UISI, Muhammad Adi Indrawan" />
+  <meta name="author" content="Muhammad Adi Indrawan" />
+  <meta property="og:title" content="Muhammad Adi Indrawan | Portfolio" />
+  <meta property="og:description" content="Web Developer & UI Designer – UISI Sistem Informasi" />
+  <meta property="og:type" content="website" />
+  <title>Muhammad Adi Indrawan | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style (1).css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-monogram">MAI</div>
+      <div class="loader-track"><div class="loader-fill"></div></div>
+      <p class="loader-label" data-id="loading">Memuat...</p>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="nav-inner" aria-label="Navigasi utama">
+      <a href="#hero" class="logo" aria-label="Home">
+        <span class="logo-lt">&lt;</span>MAI<span class="logo-lt">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li><a href="#about"     class="nl" role="menuitem" data-id="nav.about">About</a></li>
+        <li><a href="#skills"    class="nl" role="menuitem" data-id="nav.skills">Skills</a></li>
+        <li><a href="#timeline"  class="nl" role="menuitem" data-id="nav.exp">Experience</a></li>
+        <li><a href="#portfolio" class="nl" role="menuitem" data-id="nav.portfolio">Portfolio</a></li>
+        <li><a href="#contact"   class="nl" role="menuitem" data-id="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <!-- Language toggle -->
+        <button class="ctrl-btn lang-btn" id="langToggle" aria-label="Toggle language">
+          <span class="lang-flag" id="langFlag">🇮🇩</span>
+          <span class="lang-text" id="langText">ID</span>
+        </button>
+        <!-- Theme toggle -->
+        <button class="ctrl-btn theme-btn" id="themeToggle" aria-label="Toggle dark/light">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero">
+
+      <!-- Sky layers -->
+      <div class="sky-base"></div>
+      <div class="sky-glow"></div>
+      <canvas class="star-canvas" id="starCanvas" aria-hidden="true"></canvas>
+      <div class="sky-nebula n1"></div>
+      <div class="sky-nebula n2"></div>
+      <div class="sky-nebula n3"></div>
+      <div class="sky-grid"></div>
+      <!-- Floating particles -->
+      <div class="particles" id="particles" aria-hidden="true"></div>
+
+      <div class="hero-wrap">
+        <!-- Content left -->
+        <div class="hero-left">
+          <div class="hero-chip reveal-fade" style="--d:0.1s">
+            <span class="chip-dot"></span>
+            <span data-id="hero.available">Tersedia untuk Peluang Baru</span>
+          </div>
+
+          <h1 class="hero-heading reveal-fade" style="--d:0.25s">
+            <span class="h-line h-regular">Muhammad Adi</span>
+            <span class="h-line h-gradient">Indrawan</span>
+          </h1>
+
+          <div class="hero-role reveal-fade" style="--d:0.4s">
+            <span class="role-static" data-id="hero.iam">Saya seorang&nbsp;</span>
+            <span class="role-type-wrap">
+              <span class="role-typed" id="typingEl"></span><span class="role-cursor">|</span>
+            </span>
+          </div>
+
+          <p class="hero-bio reveal-fade" style="--d:0.55s" data-id="hero.bio">
+            Mahasiswa Sistem Informasi yang bersemangat membangun pengalaman
+            digital yang elegan, fungsional, dan berdampak nyata.
+          </p>
+
+          <div class="hero-actions reveal-fade" style="--d:0.7s">
+            <a href="assets/Cvnew_adi_20250923_175547_0000.pdf" class="btn-primary magnetic" download>
+              <span class="btn-ic">↓</span>
+              <span data-id="hero.cv">Download CV</span>
+            </a>
+            <a href="#contact" class="btn-ghost magnetic">
+              <span data-id="hero.contact">Hubungi Saya</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+          <div class="hero-scroll reveal-fade" style="--d:0.85s">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span data-id="hero.scroll">Geser ke bawah</span>
+          </div>
+        </div>
+
+        <!-- Avatar right -->
+        <div class="hero-right reveal-slide-right" style="--d:0.3s">
+          <div class="avatar-stage">
+            <div class="orbit o1"><div class="orbit-dot"></div></div>
+            <div class="orbit o2"><div class="orbit-dot"></div></div>
+            <div class="avatar-frame">
+              <img src="assets/images/foto-masadi.jpeg"
+                   class="avatar-img lazy" data-src="assets/images/foto-masadi.jpeg"
+                   alt="Muhammad Adi Indrawan" loading="lazy" id="avatarImg" />
+              <div class="avatar-fallback" id="avatarFallback">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <radialGradient id="ag">
+                      <stop offset="0%" stop-color="#8B5CF6"/>
+                      <stop offset="100%" stop-color="#6366F1"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="100" cy="100" r="100" fill="url(#ag)"/>
+                  <circle cx="100" cy="80" r="34" fill="rgba(255,255,255,0.92)"/>
+                  <ellipse cx="100" cy="165" rx="54" ry="42" fill="rgba(255,255,255,0.92)"/>
+                  <text x="100" y="88" text-anchor="middle"
+                        font-family="Poppins,sans-serif" font-size="22"
+                        font-weight="800" fill="#6366F1">MAI</text>
+                </svg>
+              </div>
+              <div class="avatar-shine"></div>
+            </div>
+            <div class="float-pill fp1">HTML&CSS</div>
+            <div class="float-pill fp2">JS</div>
+            <div class="float-pill fp3">UI/UX</div>
+            <div class="float-pill fp4">PHP&SQL</div>
+            <div class="float-pill fp4">Microsoft Office</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section transition wave -->
+      <div class="section-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-about)"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+    <section class="about section-block" id="about" aria-label="About">
+      <div class="section-glow sg-left"></div>
+      <div class="container">
+        <header class="section-header reveal-fade">
+          <span class="section-eyebrow" data-id="about.eyebrow">Tentang Saya</span>
+          <h2 class="section-title">
+            <span data-id="about.title1">Siapa </span><em class="grad-word" data-id="about.title2">Saya?</em>
+          </h2>
+          <div class="title-line"></div>
+        </header>
+
+        <div class="about-grid">
+          <article class="about-text reveal-left">
+            <p class="about-lead" data-id="about.lead">
+              Halo! Saya <strong>Muhammad Adi Indrawan</strong>, mahasiswa
+              <strong>Sistem Informasi</strong> di Universitas Internasional
+              Semen Indonesia (UISI) yang bersemangat di bidang teknologi.
+            </p>
+            <p data-id="about.p1">
+              Saya memiliki ketertarikan mendalam dalam <em>web development</em>,
+              <em>UI/UX design</em>, dan pengembangan sistem informasi modern.
+              Setiap baris kode yang saya tulis bertujuan menciptakan pengalaman
+              pengguna yang intuitif dan estetis.
+            </p>
+            <p data-id="about.p2">
+              Saya percaya teknologi terbaik adalah yang tidak terasa — ia
+              bekerja tanpa batas, terasa alami, dan memberdayakan penggunanya
+              untuk mencapai lebih banyak.
+            </p>
+            <div class="about-chips">
+              <span class="chip" data-id="chip.solver">🎯 Problem Solver</span>
+              <span class="chip" data-id="chip.creative">🎨 Creative Thinker</span>
+              <span class="chip" data-id="chip.tech">💡 Tech Enthusiast</span>
+              <span class="chip" data-id="chip.learner">📚 Life Learner</span>
+            </div>
+          </article>
+
+          <div class="stats-wrap reveal-right">
+            <div class="stat-card glass stagger-card" style="--si:0">
+              <div class="stat-n" data-target="3" data-suffix="+">0</div>
+              <div class="stat-l" data-id="stat.projects">Proyek Selesai</div>
+              <div class="stat-emoji">🚀</div>
+            </div>
+            <div class="stat-card glass stagger-card" style="--si:1">
+              <div class="stat-n" data-target="5" data-suffix="+">0</div>
+              <div class="stat-l" data-id="stat.certs">Sertifikat</div>
+              <div class="stat-l" data-id="stat">(MOS,CISCO,TOEFL,DLL)</div>
+              <div class="stat-emoji">🏆</div>
+            </div>
+            <div class="stat-card glass stagger-card" style="--si:2">
+              <div class="stat-n" data-target="2" data-suffix="+">0</div>
+              <div class="stat-l" data-id="stat.orgs">Organisasi</div>
+              <div class="stat-emoji">🤝</div>
+            </div>
+            <div class="stat-card glass stagger-card" style="--si:3">
+              <div class="stat-n" data-target="100" data-suffix="%">0</div>
+              <div class="stat-l" data-id="stat.commit">Dedikasi</div>
+              <div class="stat-emoji">💪</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider-grad"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════ -->
+    <section class="skills section-block" id="skills" aria-label="Skills">
+      <div class="section-glow sg-right"></div>
+      <div class="noise-overlay"></div>
+      <div class="container">
+        <header class="section-header reveal-fade">
+          <span class="section-eyebrow" data-id="skills.eyebrow">Keahlian</span>
+          <h2 class="section-title">
+            Tech <em class="grad-word" data-id="skills.title">Stack</em>
+          </h2>
+          <div class="title-line"></div>
+        </header>
+
+        <div class="skills-layout">
+          <!-- Bars -->
+          <div class="skills-bars reveal-left">
+            <h3 class="col-title" data-id="skills.level">Tingkat Keahlian</h3>
+            <div class="bar-list">
+              <div class="bar-item">
+                <div class="bar-meta"><span>HTML5</span><span class="bar-pct" data-p="90">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="90" style="--c:#E44D26"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>CSS3</span><span class="bar-pct" data-p="85">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="85" style="--c:#264DE4"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>JavaScript</span><span class="bar-pct" data-p="78">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="78" style="--c:#F7DF1E"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>PHP</span><span class="bar-pct" data-p="72">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="72" style="--c:#777BB4"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>MySQL</span><span class="bar-pct" data-p="75">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="75" style="--c:#0085A1"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>UI/UX Design</span><span class="bar-pct" data-p="80">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="80" style="--c:#06B6D4"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>Networking</span><span class="bar-pct" data-p="68">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="68" style="--c:#6366F1"></div></div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta"><span>Public Speaking</span><span class="bar-pct" data-p="82">0%</span></div>
+                <div class="bar-track"><div class="bar-fill" data-w="82" style="--c:#EC4899"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div class="skills-cards reveal-right">
+            <h3 class="col-title" data-id="skills.comp">Kompetensi</h3>
+            <div class="skill-grid">
+              <article class="sk-card glass stagger-card" style="--si:0">
+                <div class="sk-icon" style="--ic:#E44D26; --ib:rgba(228,77,38,.15)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                </div>
+                <h4>HTML5</h4><p>Semantic Markup</p>
+              </article>
+              <article class="sk-card glass stagger-card" style="--si:1">
+                <div class="sk-icon" style="--ic:#264DE4; --ib:rgba(38,77,228,.15)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75H5.357l-.168-1.921L16.33 7.826l-.23 2.622H8.561l.232 2.641h7.313l-.648 7.188-5.426 1.5-5.436-1.5-.428-4.766h2.64l.206 2.327 2.979.82 2.992-.82.317-3.554H8.531z"/></svg>
+                </div>
+                <h4>CSS3</h4><p>Animation & Layout</p>
+              </article>
+              <article class="sk-card glass stagger-card" style="--si:2">
+                <div class="sk-icon" style="--ic:#d4b800; --ib:rgba(247,223,30,.12)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                </div>
+                <h4>JavaScript</h4><p>Vanilla JS & DOM</p>
+              </article>
+              <article class="sk-card glass stagger-card" style="--si:3">
+                <div class="sk-icon" style="--ic:#06B6D4; --ib:rgba(6,182,212,.15)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg>
+                </div>
+                <h4>UI/UX</h4><p>Figma & Design Sys</p>
+              </article>
+              <article class="sk-card glass stagger-card" style="--si:4">
+                <div class="sk-icon" style="--ic:#777BB4; --ib:rgba(119,123,180,.15)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-1-.17-.197-.465-.285-.047-.285zm10.478-3.207c-2.267 0-4.134 1.27-5.346 2.754h.007l-.367 1.88h4.23l-.515 2.647h-1.27l-.385 1.973h1.27l-.207 1.061h1.973l.203-1.061h1.27l.516-2.647H18.64l.368-1.88h-4.23l.343-1.76h4.23l.369-1.893zM7.546 14.268c-.302.39-.743.658-1.32.804-.298.077-.66.11-1.086.11H4.3l-.514 2.641H2.012l1.547-7.948h3.266c.717 0 1.26.203 1.636.605.376.407.486.986.333 1.729-.093.498-.311.905-.65 1.226l.002.002zm2.048-7.263c.572-.24 1.264-.365 2.069-.365h2.92l-.35 1.8h-2.919a.86.86 0 0 0-.498.134.7.7 0 0 0-.265.423l-.168.86h3.062l-.348 1.787H10.13l-.857 4.398H7.5l1.547-7.948c.16-.555.37-.849.547-1.089z"/></svg>
+                </div>
+                <h4>PHP</h4><p>Backend & Server</p>
+              </article>
+              <article class="sk-card glass stagger-card" style="--si:5">
+                <div class="sk-icon" style="--ic:#0085A1; --ib:rgba(0,133,161,.15)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zm0 14c-3.87 0-6-1.5-6-2v-2.23C7.61 15.59 9.72 16 12 16s4.39-.41 6-1.23V17c0 .5-2.13 2-6 2z"/></svg>
+                </div>
+                <h4>MySQL</h4><p>Database Design</p>
+              </article>
+              <article class="sk-card glass stagger-card" style="--si:6">
+                <div class="sk-icon" style="--ic:#6366F1; --ib:rgba(99,102,241,.15)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4 2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                </div>
+                <h4>Networking</h4><p>Network Fundamentals</p>
+              </article>
+              <article class="sk-card glass stagger-card" style="--si:7">
+                <div class="sk-icon" style="--ic:#EC4899; --ib:rgba(236,72,153,.15)">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                </div>
+                <h4>Public Speaking</h4><p>Communication</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider-grad"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TIMELINE
+    ═══════════════════════════════════════ -->
+    <section class="timeline-sec section-block" id="timeline" aria-label="Education and Experience">
+      <div class="section-glow sg-center"></div>
+      <div class="container">
+        <header class="section-header reveal-fade">
+          <span class="section-eyebrow" data-id="tl.eyebrow">Perjalanan</span>
+          <h2 class="section-title">
+            <span data-id="tl.title1">Pendidikan & </span><em class="grad-word" data-id="tl.title2">Pengalaman</em>
+          </h2>
+          <div class="title-line"></div>
+        </header>
+
+        <div class="tl-list">
+
+          <article class="tl-item reveal-fade stagger-card" style="--si:0">
+            <div class="tl-spine">
+              <div class="tl-node"><div class="tl-pulse"></div></div>
+            </div>
+            <div class="tl-card glass">
+              <span class="tl-badge edu" data-id="badge.edu">Pendidikan</span>
+              <time class="tl-time">2024 – <span data-id="now">Sekarang</span></time>
+              <h3 data-id="tl0.title">Prodi S1 Sistem Informasi</h3>
+              <h4>Universitas Internasional Semen Indonesia (UISI)</h4>
+              <p data-id="tl0.desc">Menempuh Sarjana S1 studi Sistem Informasi dengan fokus web development, analisis sistem, dan manajemen basis data. Aktif dalam kegiatan akademik dan organisasi kampus.</p>
+              <div class="tl-tags"><span>Sistem Informasi</span><span>Web Dev</span><span>Database</span></div>
+            </div>
+          </article>
+          <article class="tl-item reveal-fade stagger-card" style="--si:0">
+            <div class="tl-spine">
+              <div class="tl-node"><div class="tl-pulse"></div></div>
+            </div>
+            <div class="tl-card glass">
+              <span class="tl-badge edu" data-id="badge.edu">Pendidikan</span>
+              <time class="tl-time">2021-2024</span></time>
+              <h3 data-id="tl1.title">Jurusan Rekayasa Perangkat Lunak</h3>
+              <h4 data-id="tl1.place">SMK SEMEN GRESIK</h4>
+              <p data-id="tl1.desc">Menempuh Pendidikan Sekolah Menegah Kejurusan selama 3 tahun,Belajar tentang dasar pemograman dan sistem kompurter</p>
+              <div class="tl-tags"><span>Software</span><span>Web Dev</span><span>Database</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item reveal-fade stagger-card" style="--si:1">
+            <div class="tl-spine">
+              <div class="tl-node"><div class="tl-pulse"></div></div>
+            </div>
+            <div class="tl-card glass">
+              <span class="tl-badge exp" data-id="badge.exp">Pengalaman</span>
+              <time class="tl-time">2023 (Januari-Juni)</time>
+              <h3 data-id="tl2.title">Magang Bagian staf TIK</h3>
+              <h4 data-id="tl2.place">Kantor Polres Gresik – Divisi Teknologi Informasi & Komunikasi</h4>
+              <p data-id="tl2.desc">Terlibat dalam pemeliharaan sistem jaringan, pengelolaan administasi, dan dukungan teknis operasional di lingkungan institusi.</p>
+              <div class="tl-tags"><span>Networking</span><span>IT Support</span><span>Infrastruktur</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item reveal-fade stagger-card" style="--si:2">
+            <div class="tl-spine">
+              <div class="tl-node"><div class="tl-pulse"></div></div>
+            </div>
+            <div class="tl-card glass">
+              <span class="tl-badge proj" data-id="badge.proj">Proyek</span>
+              <time class="tl-time">2023</time>
+              <h3 data-id="tl3.title">Website Dunia Styroform Gresik</h3>
+              <h4 data-id="tl3.place">Project Akhir Ujian SMK</h4>
+              <p data-id="tl3.desc">Membuat website statis menggunakan HTML, CSS, JavaScript. (https://duniastyrofoam.rf.gd/?i=1) serta memberikan pendampingan digital marketing kepada umkm desa ponganan</p>
+              <div class="tl-tags"><span>HTML/CSS</span><span>PHP</span><span>MySQL</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item reveal-fade stagger-card" style="--si:3">
+            <div class="tl-spine">
+              <div class="tl-node"><div class="tl-pulse"></div></div>
+            </div>
+            <div class="tl-card glass">
+              <span class="tl-badge org" data-id="badge.org">Organisasi</span>
+              <time class="tl-time">2024 – <span data-id="now">Sekarang</span></time>
+              <h3 data-id="tl4.title">Staff Ahli Departemen Kaderisasi</h3>
+              <h4 data-id="tl4.place">UKM Lembaga Dakwah Kampus UISI</h4>
+              <p data-id="tl4.desc">Berpartisipasi aktif dalam organisasi, mengasah kepemimpinan, komunikasi, dan kerja tim dalam berbagai event dan program dakwah kampus dikalangan mahasiswa.</p>
+              <div class="tl-tags"><span>Leadership</span><span>Teamwork</span><span>Event Org</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item reveal-fade stagger-card" style="--si:3">
+            <div class="tl-spine">
+              <div class="tl-node"><div class="tl-pulse"></div></div>
+            </div>
+            <div class="tl-card glass">
+              <span class="tl-badge org" data-id="badge.org">Kepanitian</span>
+              <time class="tl-time">2025 (Mei-Desember)</span></time>
+              <h3 data-id="tl5.title">Ketua Pelaksana Mentoring Dasar Agama Islam UISI 2025</h3>
+              <h4 data-id="tl5.place">Program pembinaan dasar keagamaan kampus yang diselenggarakan oleh UKM Lembaga Dakwah Kampus UISI</h4>
+              <p data-id="tl5.desc">Bertanggung jawab mengoordinasikan keseluruhan rangkaian program pembinaan bagi lebih dari 400 mahasiswa baru muslim. Memimpin persiapan program mulai dari rekrutmen dan pengelolaan mentor kelompok, penyelenggaraan School of Mentor sebagai pembekalan mentor, penyusunan alur kegiatan, koordinasi divisi kepanitiaan, hingga pelaksanaan acara ceremony dan event mentoring selama program berlangsung. Mengatur komunikasi lintas tim, memastikan kesiapan teknis dan operasional kegiatan, serta menjaga kelancaran pelaksanaan program agar berjalan tertib, edukatif, dan sesuai tujuan pembinaan mahasiswa baru.</p>
+              <div class="tl-tags"><span>Leadership</span><span>Teamwork</span><span>Event Org</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    <!-- EXPERIENCE GALLERY -->
+<section class="exp-gallery">
+  <div class="container">
+    
+    <header class="section-header reveal-fade">
+      <span class="section-eyebrow">Dokumentasi</span>
+      <h2 class="section-title">
+        Pengalaman <em class="grad-word">Kegiatan</em>
+      </h2>
+      <div class="title-line"></div>
+    </header>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="assets/images/fotopembukaan-mentoring.jpeg" alt="Mentoring UISI">
+        <div class="gallery-overlay">
+          <h3>Mentoring Dasar LDK UISI 2025</h3>
+          <p>Ketua Pelaksana</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="assets/images/fotoadi-pdh.jpeg" alt="Kegiatan kuliah">
+        <div class="gallery-overlay">
+          <h3>ADI SISFOR 10</h3>
+          <p>Foto Memakai PDH Prodi</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="assets/images/fotoadi-tikpolres.jpeg" alt="Magang Polres">
+        <div class="gallery-overlay">
+          <h3>Magang Polres</h3>
+          <p>Divisi TIK</p>
+        </div>
+      </div>
+
+      </div>
+       </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PORTFOLIO
+    ═══════════════════════════════════════ -->
+    <section class="portfolio-sec section-block" id="portfolio" aria-label="Portfolio">
+      <div class="section-glow sg-left"></div>
+      <div class="noise-overlay"></div>
+      <div class="container">
+        <header class="section-header reveal-fade">
+          <span class="section-eyebrow" data-id="pf.eyebrow">Karya</span>
+          <h2 class="section-title">
+            Portfolio <em class="grad-word" data-id="pf.title">Saya</em>
+          </h2>
+          <div class="title-line"></div>
+        </header>
+
+        <div class="pf-grid">
+
+          <article class="pf-card glass reveal-fade stagger-card" style="--si:0">
+            <div class="pf-img-wrap">
+              <div class="pf-img-bg pf-bg-1"></div>
+              <div class="pf-overlay">
+                <a href="#" class="btn-primary btn-sm">Live Preview</a>
+                <a href="#" class="btn-ghost-sm">Source</a>
+              </div>
+              <div class="pf-number">01</div>
+            </div>
+            <div class="pf-body">
+              <div class="pf-tags"><span>PHP</span><span>MySQL</span><span>JS</span></div>
+              <h3 data-id="pf0.title">Website Sistem Informasi</h3>
+              <p data-id="pf0.desc">Aplikasi web manajemen data berbasis PHP & MySQL dengan autentikasi pengguna dan laporan dinamis.</p>
+              <a href="#" class="pf-link">
+                <span data-id="pf.view">Lihat Project</span> →
+              </a>
+            </div>
+          </article>
+
+          <article class="pf-card glass reveal-fade stagger-card" style="--si:1">
+            <div class="pf-img-wrap">
+              <div class="pf-img-bg pf-bg-2"></div>
+              <div class="pf-overlay">
+                <a href="#" class="btn-primary btn-sm">Live Preview</a>
+                <a href="#" class="btn-ghost-sm">Source</a>
+              </div>
+              <div class="pf-number">02</div>
+            </div>
+            <div class="pf-body">
+              <div class="pf-tags"><span>Figma</span><span>UI/UX</span><span>Dashboard</span></div>
+              <h3 data-id="pf1.title">UI Design Dashboard Modern</h3>
+              <p data-id="pf1.desc">Desain dashboard analitik modern dengan komponen bersih, intuitif, dan berorientasi data.</p>
+              <a href="#" class="pf-link">
+                <span data-id="pf.view">Lihat Project</span> →
+              </a>
+            </div>
+          </article>
+
+          <article class="pf-card glass reveal-fade stagger-card" style="--si:2">
+            <div class="pf-img-wrap">
+              <div class="pf-img-bg pf-bg-3"></div>
+              <div class="pf-overlay">
+                <a href="https://duniastyrofoam.rf.gd/?i=1" class="btn-primary btn-sm">Live Preview</a>
+                <a href="#" class="btn-ghost-sm">Source</a>
+              </div>
+              <div class="pf-number">03</div>
+            </div>
+            <div class="pf-body">
+              <div class="pf-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+              <h3 data-id="pf2.title">Website Dunia Styrofoam Gresik</h3>
+              <p data-id="pf2.desc">Website statis umkm desa pongangan (duniastyrofoam)</p>
+              <a href="https://duniastyrofoam.rf.gd/?i=1" class="pf-link">
+                <span data-id="pf.view">Lihat Real Project</span> →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <div class="section-divider-grad"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section class="contact-sec section-block" id="contact" aria-label="Contact">
+      <div class="section-glow sg-center"></div>
+      <div class="container">
+        <header class="section-header reveal-fade">
+          <span class="section-eyebrow" data-id="ct.eyebrow">Kontak</span>
+          <h2 class="section-title">
+            <span data-id="ct.title1">Mari </span><em class="grad-word" data-id="ct.title2">Berkolaborasi</em>
+          </h2>
+          <div class="title-line"></div>
+          <p class="section-sub reveal-fade" data-id="ct.sub">Punya proyek menarik? Atau sekadar ingin berkenalan? Saya selalu terbuka untuk peluang baru!</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Info -->
+          <div class="ct-info reveal-left">
+            <div class="ct-card glass">
+              <h3 data-id="ct.infoTitle">Informasi Kontak</h3>
+              <div class="ct-list">
+                <div class="ct-row">
+                  <span class="ct-icon">📧</span>
+                  <div>
+                    <span class="ct-lbl" data-id="ct.emailLbl">Email</span>
+                    <a href="mailto:muhammadadiindrawan@gmail.com" class="ct-val">muhammadadiindrawan@gmail.com</a>
+                  </div>
+                </div>
+                <div class="ct-row">
+                  <span class="ct-icon">📍</span>
+                  <div>
+                    <span class="ct-lbl" data-id="ct.locLbl">Lokasi</span>
+                    <span class="ct-val">Gresik, Jawa Timur, Indonesia</span>
+                  </div>
+                </div>
+                <div class="ct-row">
+                  <span class="ct-icon">🎓</span>
+                  <div>
+                    <span class="ct-lbl" data-id="ct.uniLbl">Universitas</span>
+                    <span class="ct-val">UISI – Sistem Informasi</span>
+                  </div>
+                </div>
+              </div>
+              <div class="socials">
+                <p class="socials-label" data-id="ct.findMe">Temukan Saya Di</p>
+                <div class="social-row">
+                  <a href="https://instagram.com/@adiindrwn20_" target="_blank" rel="noopener" class="soc-btn ig" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  </a>
+                  <a href="https://linkedin.com/" target="_blank" rel="noopener" class="soc-btn li" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                  <a href="https://github.com/muhammadindrawan24" target="_blank" rel="noopener" class="soc-btn gh" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  </a>
+                  <a href="https://wa.me/082142162112" target="_blank" rel="noopener" class="soc-btn wa" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="ct-form-wrap reveal-right">
+            <form class="ct-form glass" id="contactForm" novalidate>
+              <h3 data-id="ct.formTitle">Kirim Pesan</h3>
+              <div class="field">
+                <label for="fName" data-id="ct.nameLabel">Nama Lengkap</label>
+                <input type="text" id="fName" name="name" placeholder="Nama Anda" autocomplete="name" required/>
+                <span class="ferr" id="nameErr"></span>
+              </div>
+              <div class="field">
+                <label for="fEmail" data-id="ct.emailLabel">Email</label>
+                <input type="email" id="fEmail" name="email" placeholder="email@contoh.com" autocomplete="email" required/>
+                <span class="ferr" id="emailErr"></span>
+              </div>
+              <div class="field">
+                <label for="fMsg" data-id="ct.msgLabel">Pesan</label>
+                <textarea id="fMsg" name="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+                <span class="ferr" id="msgErr"></span>
+              </div>
+              <button type="submit" class="btn-primary magnetic" id="submitBtn">
+                <span class="btn-text" data-id="ct.send">Kirim Pesan ✉️</span>
+              </button>
+              <div class="form-ok" id="formOk">✅ <span data-id="ct.sent">Pesan terkirim! Terima kasih.</span></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-glow-line"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <span class="logo-lt">&lt;</span>MAI<span class="logo-lt">/&gt;</span>
+          </a>
+          <p class="footer-tagline" data-id="footer.tagline">Membangun masa depan digital, satu baris kode pada satu waktu.</p>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-col-head" data-id="footer.nav">Navigasi</p>
+          <ul>
+            <li><a href="#about" data-id="nav.about">About</a></li>
+            <li><a href="#skills" data-id="nav.skills">Skills</a></li>
+            <li><a href="#timeline" data-id="nav.exp">Experience</a></li>
+            <li><a href="#portfolio" data-id="nav.portfolio">Portfolio</a></li>
+            <li><a href="#contact" data-id="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social-col">
+          <p class="footer-col-head" data-id="footer.social">Social</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/@adiindrwn20_" target="_blank" rel="noopener" aria-label="Instagram" class="fs-btn">IG</a>
+            <a href="https://linkedin.com/in/muhammad-adi-indrawan-951126305/" target="_blank" rel="noopener" aria-label="LinkedIn" class="fs-btn">LI</a>
+            <a href="https://github.com/muhammadindrawan24" target="_blank" rel="noopener" aria-label="GitHub" class="fs-btn">GH</a>
+            <a href="https://wa.me/082142162112" target="_blank" rel="noopener" aria-label="WhatsApp" class="fs-btn">WA</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="yr"></span> Muhammad Adi Indrawan. <span data-id="footer.crafted">Crafted with ❤️ &amp; ☕</span></p>
+      </div>
+    </div>
+    <button class="btt" id="btt" aria-label="Kembali ke atas">↑</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
