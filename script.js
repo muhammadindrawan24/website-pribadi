@@ -180,7 +180,7 @@ const T = {
     'about.eyebrow':'About Me',
     'about.title1':'Who ',
     'about.title2':'Am I?',
-    'about.lead':'Hello! I\'m <strong>Muhammad Adi Indrawan</strong>, an Information Systems student at UISI passionate about technology.',
+    'about.lead':'Hello! I\'m <strong>Muhammad Adi Indrawan</strong>, an <strong>Information Systems</strong> student at UISI passionate about technology.',
     'about.p1':'I have a deep interest in web development, UI/UX design, and modern information system development.',
     'about.p2':'I believe the best technology is invisible — seamless, natural, and empowering.',
 
