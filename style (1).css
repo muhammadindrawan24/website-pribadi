@@ -1360,6 +1360,8 @@ a.ct-val:hover { color:var(--p); }
 
 #yr { color:var(--p); font-weight:700; }
 
+.footer-bottom { animation:footerFade .8s var(--ease) .35s both; }
+
 .btt.vis { animation:bttPulse 2.8s ease-in-out infinite; }
 .btt::after {
   content:''; position:absolute; inset:-4px; border-radius:inherit;
@@ -1383,5 +1385,6 @@ a.ct-val:hover { color:var(--p); }
 @media(prefers-reduced-motion: reduce) {
   .footer::after, .footer-col-head::before, .footer-glow-line,
   .footer-top::after, .footer-nav-col.revealed li,
-  .footer-social-col.revealed .fs-btn, .btt.vis, .btt::after { animation:none; }
+  .footer-social-col.revealed .fs-btn, .btt.vis, .btt::after,
+  .footer-bottom { animation:none; }
 }
