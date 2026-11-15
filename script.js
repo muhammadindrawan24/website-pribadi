@@ -84,6 +84,12 @@ const T = {
     'tl5.place':'Program pembinaan dasar keagamaan kampus oleh UKM LDK UISI',
     'tl5.desc':'Bertanggung jawab mengoordinasikan program pembinaan lebih dari 400 mahasiswa baru muslim mulai dari rekrutmen mentor, School of Mentor, koordinasi kepanitiaan, hingga pelaksanaan ceremony dan event mentoring.',
 
+    /* TL6 */
+    'tl6.time':'2026 – 2027',
+    'tl6.title':'Staff Ahli Departemen Dalam Negeri',
+    'tl6.place':'Himpunan Mahasiswa Sistem Informasi (HIMASISFOR)',
+    'tl6.desc':'Berkontribusi aktif dalam kegiatan internal himpunan serta mendukung koordinasi dan pelaksanaan program kerja departemen.',
+
     /* PORTFOLIO */
     'pf.eyebrow':'Karya',
     'pf.title':'Saya',
@@ -239,6 +245,12 @@ const T = {
     'tl5.title':'Chief Executive of Islamic Basic Mentoring UISI 2025',
     'tl5.place':'Campus religious mentoring program organized by UISI Islamic Organization',
     'tl5.desc':'Responsible for coordinating a mentoring program for more than 400 new Muslim students, including mentor recruitment, School of Mentor activities, committee coordination, and mentoring events.',
+
+    /* TL6 */
+    'tl6.time':'2026 – 2027',
+    'tl6.title':'Expert Staff of the Internal Affairs Department',
+    'tl6.place':'Information Systems Student Association (HIMASISFOR)',
+    'tl6.desc':'Actively contributes to the association\'s internal activities and supports the coordination and execution of departmental work programs.',
 
     /* PORTFOLIO */
     'pf.eyebrow':'Work',
