@@ -123,6 +123,43 @@ const T = {
     'footer.nav':'Navigasi',
     'footer.social':'Social',
     'footer.crafted':'Crafted with ❤️ & ☕',
+
+    /* GALLERY */
+    'gallery.eyebrow':'Dokumentasi',
+    'gallery.title1':'Pengalaman ',
+    'gallery.title2':'Kegiatan',
+    'gal0.title':'Mentoring Dasar LDK UISI 2025',
+    'gal0.sub':'Ketua Pelaksana',
+    'gal1.title':'ADI SISFOR 10',
+    'gal1.sub':'Foto Memakai PDH Prodi',
+    'gal2.title':'Magang Polres',
+    'gal2.sub':'Divisi TIK',
+
+    /* EXTRA CONTACT & FORM */
+    'ct.locVal':'Gresik, Jawa Timur, Indonesia',
+    'ct.uniVal':'UISI – Sistem Informasi',
+    'ph.name':'Nama Anda',
+    'ph.email':'email@contoh.com',
+    'ph.msg':'Tulis pesan Anda...',
+
+    /* EXTRA TIMELINE */
+    'tl2.time':'2023 (Januari-Juni)',
+    'tl5.time':'2025 (Mei-Desember)',
+    'tag.is':'Sistem Informasi',
+    'tag.infra':'Infrastruktur',
+    'badge.committee':'Kepanitiaan',
+    'alt.gal0':'Mentoring UISI',
+    'alt.gal1':'Kegiatan kuliah',
+    'alt.gal2':'Magang Polres',
+
+    /* EXTRA UI */
+    'pf.live':'Pratinjau',
+    'pf.source':'Sumber',
+    'btt.label':'Kembali ke atas',
+    'meta.title':'Muhammad Adi Indrawan | Portofolio',
+    'meta.desc':'Muhammad Adi Indrawan – Web Developer & UI Designer. Portofolio profesional mahasiswa Sistem Informasi UISI.',
+    'meta.keywords':'Web Developer, UI Designer, Portofolio, Sistem Informasi, UISI, Muhammad Adi Indrawan',
+    'meta.og':'Web Developer & UI Designer – UISI Sistem Informasi',
   },
 
   en: {
@@ -243,6 +280,43 @@ const T = {
     'footer.nav':'Navigation',
     'footer.social':'Social',
     'footer.crafted':'Crafted with ❤️ & ☕',
+
+    /* GALLERY */
+    'gallery.eyebrow':'Documentation',
+    'gallery.title1':'Activity ',
+    'gallery.title2':'Gallery',
+    'gal0.title':'LDK UISI Basic Mentoring 2025',
+    'gal0.sub':'Chief Executive',
+    'gal1.title':'ADI SISFOR 10',
+    'gal1.sub':'Photo in Study Program Uniform',
+    'gal2.title':'Police Office Internship',
+    'gal2.sub':'ICT Division',
+
+    /* EXTRA CONTACT & FORM */
+    'ct.locVal':'Gresik, East Java, Indonesia',
+    'ct.uniVal':'UISI – Information Systems',
+    'ph.name':'Your name',
+    'ph.email':'email@example.com',
+    'ph.msg':'Write your message...',
+
+    /* EXTRA TIMELINE */
+    'tl2.time':'2023 (January–June)',
+    'tl5.time':'2025 (May–December)',
+    'tag.is':'Information Systems',
+    'tag.infra':'Infrastructure',
+    'badge.committee':'Committee',
+    'alt.gal0':'UISI Mentoring',
+    'alt.gal1':'Campus activity',
+    'alt.gal2':'Police office internship',
+
+    /* EXTRA UI */
+    'pf.live':'Live Preview',
+    'pf.source':'Source',
+    'btt.label':'Back to top',
+    'meta.title':'Muhammad Adi Indrawan | Portfolio',
+    'meta.desc':'Muhammad Adi Indrawan – Web Developer & UI Designer. Professional portfolio of an Information Systems student at UISI.',
+    'meta.keywords':'Web Developer, UI Designer, Portfolio, Information Systems, UISI, Muhammad Adi Indrawan',
+    'meta.og':'Web Developer & UI Designer – UISI Information Systems',
   }
 };
 
@@ -350,6 +424,28 @@ function applyLang(lang, init) {
     const key = el.dataset.id;
     if (map[key] !== undefined) el.innerHTML = map[key];
   });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-id-ph]').forEach(el => {
+    const v = map[el.dataset.idPh];
+    if (v !== undefined) el.placeholder = v;
+  });
+  document.querySelectorAll('[data-id-aria]').forEach(el => {
+    const v = map[el.dataset.idAria];
+    if (v !== undefined) el.setAttribute('aria-label', v);
+  });
+  document.querySelectorAll('[data-id-alt]').forEach(el => {
+    const v = map[el.dataset.idAlt];
+    if (v !== undefined) el.alt = v;
+  });
+  const setMeta = (sel, attr, key) => {
+    const el = document.querySelector(sel);
+    if (el && map[key] !== undefined) el.setAttribute(attr, map[key]);
+  };
+  setMeta('meta[name="description"]', 'content', 'meta.desc');
+  setMeta('meta[name="keywords"]', 'content', 'meta.keywords');
+  setMeta('meta[property="og:description"]', 'content', 'meta.og');
+  setMeta('meta[property="og:title"]', 'content', 'meta.title');
+  if (map['meta.title']) document.title = map['meta.title'];
   const flag = document.getElementById('langFlag');
   const txt  = document.getElementById('langText');
   if (flag) flag.textContent = lang === 'id' ? '🇮🇩' : '🇬🇧';
