@@ -95,6 +95,7 @@ const T = {
     'pf.title':'Saya',
     'pf.view':'Lihat Project',
     'pf.read':'Baca Artikel',
+    'pf.prototype':'Lihat Prototype',
 
     'pf0.title':'Website Dunia Styrofoam Gresik',
     'pf0.desc':'Website statis umkm desa pongangan (duniastyrofoam)',
@@ -104,6 +105,9 @@ const T = {
 
     'pf2.title':'SIM Mentoring Islam',
     'pf2.desc':'Sistem manajemen mentoring agama Islam untuk mahasiswa baru: pendataan mentor, kelompok, dan kegiatan mentoring.',
+
+    'pf3.title':'EntreMatch',
+    'pf3.desc':'Platform rekomendasi usaha berdasarkan karakter dan kepribadian berbasis AI.',
 
     /* CONTACT */
     'ct.eyebrow':'Kontak',
@@ -258,6 +262,7 @@ const T = {
     'pf.title':'Portfolio',
     'pf.view':'View Project',
     'pf.read':'Read Article',
+    'pf.prototype':'View Prototype',
 
     'pf0.title':'Website Styrofoam word Gresik',
     'pf0.desc':'project web static umkm desa pongangan (dunia styroform gresik)',
@@ -267,6 +272,9 @@ const T = {
 
     'pf2.title':'Islamic Mentoring Information System',
     'pf2.desc':'Islamic mentoring management system for new students, covering mentors, groups, and mentoring activities.',
+
+    'pf3.title':'EntreMatch',
+    'pf3.desc':'AI-powered business recommendation platform based on character and personality.',
 
     /* CONTACT */
     'ct.eyebrow':'Contact',
