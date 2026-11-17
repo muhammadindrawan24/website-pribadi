@@ -95,17 +95,11 @@ const T = {
     'pf.title':'Saya',
     'pf.view':'Lihat Project',
 
-    'pf0.title':'Website Sistem Informasi',
-    'pf0.desc':'Aplikasi web manajemen data berbasis PHP & MySQL dengan autentikasi pengguna dan laporan dinamis.',
+    'pf0.title':'Website Dunia Styrofoam Gresik',
+    'pf0.desc':'Website statis umkm desa pongangan (duniastyrofoam)',
 
-    'pf1.title':'UI Design Dashboard Modern',
-    'pf1.desc':'Desain dashboard analitik modern dengan komponen bersih, intuitif, dan berorientasi data.',
-
-    'pf2.title':'Website Dunia Styrofoam Gresik',
-    'pf2.desc':'Website statis umkm desa pongangan (duniastyrofoam)',
-
-    'pf3.title':'SIM Mentoring Islam',
-    'pf3.desc':'Sistem manajemen mentoring agama Islam untuk mahasiswa baru: pendataan mentor, kelompok, dan kegiatan mentoring.',
+    'pf1.title':'SIM Mentoring Islam',
+    'pf1.desc':'Sistem manajemen mentoring agama Islam untuk mahasiswa baru: pendataan mentor, kelompok, dan kegiatan mentoring.',
 
     /* CONTACT */
     'ct.eyebrow':'Kontak',
@@ -260,17 +254,11 @@ const T = {
     'pf.title':'Portfolio',
     'pf.view':'View Project',
 
-    'pf0.title':'Information System Website',
-    'pf0.desc':'PHP & MySQL-based web data management application with authentication and dynamic reports.',
+    'pf0.title':'Website Styrofoam word Gresik',
+    'pf0.desc':'project web static umkm desa pongangan (dunia styroform gresik)',
 
-    'pf1.title':'Modern Dashboard UI Design',
-    'pf1.desc':'Modern analytics dashboard design with clean and intuitive components.',
-
-    'pf2.title':'Website Styrofoam word Gresik',
-    'pf2.desc':'project web static umkm desa pongangan (dunia styroform gresik)',
-
-    'pf3.title':'Islamic Mentoring Information System',
-    'pf3.desc':'Islamic mentoring management system for new students, covering mentors, groups, and mentoring activities.',
+    'pf1.title':'Islamic Mentoring Information System',
+    'pf1.desc':'Islamic mentoring management system for new students, covering mentors, groups, and mentoring activities.',
 
     /* CONTACT */
     'ct.eyebrow':'Contact',
