@@ -670,7 +670,6 @@ body:has(button:hover) .cursor-ring {
   display:grid; grid-template-columns:repeat(3,1fr);
   gap:1.75rem; position:relative; z-index:1;
 }
-.pf-grid--four { grid-template-columns:repeat(2,1fr); }
 .pf-card { border-radius:var(--r-l); overflow:hidden; }
 .pf-card:hover { transform:translateY(-10px) !important; }
 .pf-img-wrap {
@@ -685,6 +684,7 @@ body:has(button:hover) .cursor-ring {
 .pf-bg-2 { background:linear-gradient(135deg,#92400e 0%,#F59E0B 50%,#FCD34D 100%); }
 .pf-bg-3 { background:linear-gradient(135deg,#5b21b6 0%,#8B5CF6 50%,#EC4899 100%); }
 .pf-bg-4 { background:linear-gradient(135deg,#065f46 0%,#10B981 50%,#6EE7B7 100%); }
+.pf-bg-5 { background:linear-gradient(135deg,#7f1d1d 0%,#EF4444 50%,#FCA5A5 100%); }
 
 /* Number watermark */
 .pf-number {

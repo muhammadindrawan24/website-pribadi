@@ -109,6 +109,9 @@ const T = {
     'pf3.title':'EntreMatch',
     'pf3.desc':'Platform rekomendasi usaha berdasarkan karakter dan kepribadian berbasis AI.',
 
+    'pf4.title':'KLINIK SEHAT',
+    'pf4.desc':'Aplikasi manajemen klinik dengan 4 role akses: petugas, admin, dokter, dan pasien; dilengkapi manajemen stok obat, keuangan, laporan PDF, dan lainnya.',
+
     /* CONTACT */
     'ct.eyebrow':'Kontak',
     'ct.title1':'Mari ',
@@ -275,6 +278,9 @@ const T = {
 
     'pf3.title':'EntreMatch',
     'pf3.desc':'AI-powered business recommendation platform based on character and personality.',
+
+    'pf4.title':'KLINIK SEHAT',
+    'pf4.desc':'Clinic management application with 4 access roles: staff, admin, doctor, and patient; equipped with medicine stock management, finance, PDF reports, and more.',
 
     /* CONTACT */
     'ct.eyebrow':'Contact',
