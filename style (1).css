@@ -803,6 +803,10 @@ a.ct-val:hover { color:var(--p); }
 }
 .fs-btn:hover { background:var(--p); border-color:var(--p); color:#fff; transform:translateY(-3px); }
 .footer-bottom { text-align:center; color:var(--text-f); font-size:0.84rem; }
+.footer-clock {
+  margin-top:0.45rem; font-size:0.72rem; letter-spacing:0.03em;
+  color:var(--text-f); font-variant-numeric:tabular-nums; opacity:0.85;
+}
 
 /* Back to top */
 .btt {

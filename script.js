@@ -399,6 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallaxScroll();
   initRipple();
   initSmoothScroll();
+  initClock();
   document.getElementById('yr').textContent = new Date().getFullYear();
   console.log('%c MAI Portfolio v2 %c Web Dev & UI Designer ',
     'background:linear-gradient(135deg,#6366F1,#06B6D4);color:#fff;padding:5px 12px;border-radius:4px 0 0 4px;font-weight:900;',
@@ -831,6 +832,30 @@ function initContactForm() {
 ══════════════════════════ */
 function initBackToTop() {
   document.getElementById('btt')?.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+}
+
+function initClock() {
+  const el = document.getElementById('liveClock');
+  if (!el) return;
+  let locale = '';
+  let dateFmt, timeFmt;
+  const tick = () => {
+    const lang = currentLang === 'en' ? 'en-GB' : 'id-ID';
+    if (lang !== locale) {
+      locale = lang;
+      dateFmt = new Intl.DateTimeFormat(locale, {
+        weekday:'long', day:'numeric', month:'long', year:'numeric'
+      });
+      timeFmt = new Intl.DateTimeFormat(locale, {
+        hour:'2-digit', minute:'2-digit', second:'2-digit',
+        hour12:false, timeZoneName:'short'
+      });
+    }
+    const now = new Date();
+    el.textContent = `${dateFmt.format(now)} · ${timeFmt.format(now)}`;
+  };
+  tick();
+  setInterval(tick, 1000);
 }
 
 /* ══════════════════════════
