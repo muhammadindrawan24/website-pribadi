@@ -94,12 +94,16 @@ const T = {
     'pf.eyebrow':'Karya',
     'pf.title':'Saya',
     'pf.view':'Lihat Project',
+    'pf.read':'Baca Artikel',
 
     'pf0.title':'Website Dunia Styrofoam Gresik',
     'pf0.desc':'Website statis umkm desa pongangan (duniastyrofoam)',
 
-    'pf1.title':'SIM Mentoring Islam',
-    'pf1.desc':'Sistem manajemen mentoring agama Islam untuk mahasiswa baru: pendataan mentor, kelompok, dan kegiatan mentoring.',
+    'pf1.title':'Menyelamatkan Batik, Menjaga Identitas Nasional dari Invasi Asing',
+    'pf1.desc':'Karya opini saya di JurnalPost tentang pelestarian batik sebagai identitas nasional di tengah invasi batik impor.',
+
+    'pf2.title':'SIM Mentoring Islam',
+    'pf2.desc':'Sistem manajemen mentoring agama Islam untuk mahasiswa baru: pendataan mentor, kelompok, dan kegiatan mentoring.',
 
     /* CONTACT */
     'ct.eyebrow':'Kontak',
@@ -253,12 +257,16 @@ const T = {
     'pf.eyebrow':'Work',
     'pf.title':'Portfolio',
     'pf.view':'View Project',
+    'pf.read':'Read Article',
 
     'pf0.title':'Website Styrofoam word Gresik',
     'pf0.desc':'project web static umkm desa pongangan (dunia styroform gresik)',
 
-    'pf1.title':'Islamic Mentoring Information System',
-    'pf1.desc':'Islamic mentoring management system for new students, covering mentors, groups, and mentoring activities.',
+    'pf1.title':'Saving Batik, Preserving National Identity from Foreign Invasion',
+    'pf1.desc':'My opinion piece on JurnalPost about preserving batik as the national identity amid the influx of imported batik.',
+
+    'pf2.title':'Islamic Mentoring Information System',
+    'pf2.desc':'Islamic mentoring management system for new students, covering mentors, groups, and mentoring activities.',
 
     /* CONTACT */
     'ct.eyebrow':'Contact',
