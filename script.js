@@ -837,6 +837,8 @@ function initBackToTop() {
 function initClock() {
   const el = document.getElementById('liveClock');
   if (!el) return;
+  const dateEl = el.querySelector('.nav-clock-date');
+  const timeEl = el.querySelector('.nav-clock-time');
   let locale = '';
   let dateFmt, timeFmt;
   const tick = () => {
@@ -852,7 +854,14 @@ function initClock() {
       });
     }
     const now = new Date();
-    el.textContent = `${dateFmt.format(now)} · ${timeFmt.format(now)}`;
+    const date = dateFmt.format(now);
+    const time = timeFmt.format(now);
+    if (dateEl && timeEl) {
+      dateEl.textContent = date;
+      timeEl.textContent = time;
+    } else {
+      el.textContent = `${date} · ${time}`;
+    }
   };
   tick();
   setInterval(tick, 1000);
