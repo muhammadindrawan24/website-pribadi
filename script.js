@@ -104,6 +104,9 @@ const T = {
     'pf2.title':'Website Dunia Styrofoam Gresik',
     'pf2.desc':'Website statis umkm desa pongangan (duniastyrofoam)',
 
+    'pf3.title':'SIM Mentoring Islam',
+    'pf3.desc':'Sistem manajemen mentoring agama Islam untuk mahasiswa baru: pendataan mentor, kelompok, dan kegiatan mentoring.',
+
     /* CONTACT */
     'ct.eyebrow':'Kontak',
     'ct.title1':'Mari ',
@@ -265,6 +268,9 @@ const T = {
 
     'pf2.title':'Website Styrofoam word Gresik',
     'pf2.desc':'project web static umkm desa pongangan (dunia styroform gresik)',
+
+    'pf3.title':'Islamic Mentoring Information System',
+    'pf3.desc':'Islamic mentoring management system for new students, covering mentors, groups, and mentoring activities.',
 
     /* CONTACT */
     'ct.eyebrow':'Contact',
