@@ -99,8 +99,8 @@ const T = {
     'pf0.title':'Website Dunia Styrofoam Gresik',
     'pf0.desc':'Website statis umkm desa pongangan (duniastyrofoam)',
 
-    'pf1.title':'Menyelamatkan Batik, Menjaga Identitas Nasional dari Invasi Asing',
-    'pf1.desc':'Karya opini saya di JurnalPost tentang pelestarian batik sebagai identitas nasional di tengah invasi batik impor.',
+    'pf1.title':'Opini Penulis Artikel',
+    'pf1.desc':'Karya opini di JurnalPost berjudul "Menyelamatkan Batik, Menjaga Identitas Nasional dari Invasi Asing" tentang pelestarian batik sebagai identitas nasional.',
 
     'pf2.title':'SIM Mentoring Islam',
     'pf2.desc':'Sistem manajemen mentoring agama Islam untuk mahasiswa baru: pendataan mentor, kelompok, dan kegiatan mentoring.',
@@ -262,8 +262,8 @@ const T = {
     'pf0.title':'Website Styrofoam word Gresik',
     'pf0.desc':'project web static umkm desa pongangan (dunia styroform gresik)',
 
-    'pf1.title':'Saving Batik, Preserving National Identity from Foreign Invasion',
-    'pf1.desc':'My opinion piece on JurnalPost about preserving batik as the national identity amid the influx of imported batik.',
+    'pf1.title':'Opinion Article',
+    'pf1.desc':'An opinion piece published on JurnalPost, "Saving Batik, Preserving National Identity from Foreign Invasion," about preserving batik as the national identity.',
 
     'pf2.title':'Islamic Mentoring Information System',
     'pf2.desc':'Islamic mentoring management system for new students, covering mentors, groups, and mentoring activities.',
