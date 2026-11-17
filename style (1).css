@@ -1400,3 +1400,46 @@ a.ct-val:hover { color:var(--p); }
   .footer-social-col.revealed .fs-btn, .btt.vis, .btt::after,
   .footer-bottom { animation:none; }
 }
+
+/* ── Light mode: animasi warna background ── */
+[data-theme="light"] body {
+  background:linear-gradient(120deg,
+    #F4F6FB 0%, #E8ECFF 22%, #FCE7F3 45%, #E0F2FE 68%, #F4F6FB 100%);
+  background-size:320% 320%;
+  background-attachment:fixed;
+  animation:lightBgFlow 18s ease-in-out infinite;
+}
+[data-theme="light"] .sky-base {
+  background:linear-gradient(120deg,
+    #EEF2FF 0%, #FDF2F8 30%, #ECFEFF 60%, #EEF2FF 100%);
+  background-size:300% 300%;
+  animation:lightSkyFlow 14s ease-in-out infinite alternate;
+}
+[data-theme="light"] .sky-glow {
+  animation:lightGlowDrift 12s ease-in-out infinite alternate;
+}
+[data-theme="light"] .about,
+[data-theme="light"] .skills,
+[data-theme="light"] .timeline-sec,
+[data-theme="light"] .portfolio-sec,
+[data-theme="light"] .contact-sec,
+[data-theme="light"] .footer {
+  background:rgba(255,255,255,0.55);
+}
+@keyframes lightBgFlow {
+  0%,100% { background-position:0% 50%; }
+  50%     { background-position:100% 50%; }
+}
+@keyframes lightSkyFlow {
+  0%   { background-position:0% 50%; }
+  100% { background-position:100% 50%; }
+}
+@keyframes lightGlowDrift {
+  0%   { transform:translate3d(0,0,0) scale(1); opacity:0.75; }
+  100% { transform:translate3d(-2%,3%,0) scale(1.08); opacity:1; }
+}
+@media(prefers-reduced-motion: reduce) {
+  [data-theme="light"] body,
+  [data-theme="light"] .sky-base,
+  [data-theme="light"] .sky-glow { animation:none; }
+}
